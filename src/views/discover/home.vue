@@ -5,8 +5,8 @@
             <!-- <div class="page-container" :style="{background:'url('+backgroundImg+')',backgroundRepeat:'no-repeat',backgroundSize:'cover'}"> -->
             <div class="page-container">
                 <img :src="backgroundImg" :style="bannerStyle"/>
-                <a class="banner-left" ><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABrUlEQVR4Xu3b4U3EMAwFYL8JYASYDNiADeA2YAOOze4mgA2MLIFUVer1pHPs5yT9f23fFycnOSlk8AuD55cJMCtgcIE5BQYvAP5FUFXfROT1b6A+ABw8B416Cqjqp4g8rwIfALx7IdACbIS33CcAj10DXAhvuc8AHroF2AlvufudAleE/wKwXhNuKgaaNSAjvMlRAGSFpwDIDJ8OkB0+FYAhfBoAS/gUAKbw4QBs4UMBGMOHAbCGDwFgDt8cgD18U4AK4ZsBVAnfBKBSeHeAauFdASqGdwNQVevSWvt663Lv5NzUBlr82KUhoqrfInK/8VK04T0r4EdE7jYAjgBevEbM+z5eFbA3BWgRXABsVFT1KCJPF0aIEsENoCqCK0BFBHeAaghNACohNAOogtAUoAJCcwB2hBAAZoQwAFaEUABGhHAANoQUACaENAAWhFQABoR0gGwECoBMBBqALAQqgCsR+j0o+d9O22mv9X9WeKcS+j4rvGyqblRC/1NghWAtd/tgwvYerLPs9q2A28aI92ZF5P3o/gUiw88KYDktHj3qy+fNKZCpz/Ds4SvgF4XV+0EannhHAAAAAElFTkSuQmCC"/></a>
-                <a class="banner-right"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACUklEQVR4Xu2a61HDQAyEVxVAB9ABlBA6oANIBYQKCBUAFRAqACqAEqACoAOoQMzOOEwm48fFOekU7Pvt1363Wp91Fgx8yMD1YwQwOmDgBMYSGLgBxhDMXgKqug/gBsB55a5bANci8h3RbRYAHgGcrol9A3ASEYIFAG2Y6ZAQLADQ6nu7AsECAGv+oqXeQzkhOwAKV9UFgLMWCHQJM4Ewig4TALsEwQzArkAwBbALEMwBVBC4KLrvyIRLEWF2uA4XAIkQeNjUG4IbgKgQXAFEhOAOoILAbwXWe9OKkYfNROTOOhCKAKggHAN47YCwEJGpJYRiAKJAKAogAoTiAFYgPAE4aLG7STmEAFBBYCeJmXDk+SUZBkApCKEAlIAQDoA3hJAAViCwu9TWWHkWkfUG7EbLhrAAliq6uksispWGrU7eCHWPg1WVq8UXAHxD1I0vETnscem/U8ICSBBPEewhsEx6j5AAEsU/iMhy9+n/APAUT2qhHJAoPmvXKAyAEuLDOEBVJwC4qdqU9nzWrDO/DI3iDlDVro6xmfjiDigtviiACOKLAUgQ/1M1Rc03StwzIFH8xGvn2BVANPGuJaCqVwDmLWtW2t5t5l1fg6rKjdG2dXsR8S4OiCzeHEB08aYAEsS/839CEfns/S2b4USTt0CieAZe8b9HswNQVSY9E79pcOZDiDcpAVX9ANDUpwsl3goAa7pujy+ceCsAdSUQUrwJAF60yoFZFQL8oJlHCLy6UMoeghneTK6XGAG44g54s9EBASfF9ZFGB7jiDnizwTvgF3UcC1CIOVnkAAAAAElFTkSuQmCC"/></a>
+                <div class="banner-left" @click="bannerMoveClick(-1)"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABrUlEQVR4Xu3b4U3EMAwFYL8JYASYDNiADeA2YAOOze4mgA2MLIFUVer1pHPs5yT9f23fFycnOSlk8AuD55cJMCtgcIE5BQYvAP5FUFXfROT1b6A+ABw8B416Cqjqp4g8rwIfALx7IdACbIS33CcAj10DXAhvuc8AHroF2AlvufudAleE/wKwXhNuKgaaNSAjvMlRAGSFpwDIDJ8OkB0+FYAhfBoAS/gUAKbw4QBs4UMBGMOHAbCGDwFgDt8cgD18U4AK4ZsBVAnfBKBSeHeAauFdASqGdwNQVevSWvt663Lv5NzUBlr82KUhoqrfInK/8VK04T0r4EdE7jYAjgBevEbM+z5eFbA3BWgRXABsVFT1KCJPF0aIEsENoCqCK0BFBHeAaghNACohNAOogtAUoAJCcwB2hBAAZoQwAFaEUABGhHAANoQUACaENAAWhFQABoR0gGwECoBMBBqALAQqgCsR+j0o+d9O22mv9X9WeKcS+j4rvGyqblRC/1NghWAtd/tgwvYerLPs9q2A28aI92ZF5P3o/gUiw88KYDktHj3qy+fNKZCpz/Ds4SvgF4XV+0EannhHAAAAAElFTkSuQmCC"/></div>
+                <div class="banner-right" @click="bannerMoveClick(1)"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACUklEQVR4Xu2a61HDQAyEVxVAB9ABlBA6oANIBYQKCBUAFRAqACqAEqACoAOoQMzOOEwm48fFOekU7Pvt1363Wp91Fgx8yMD1YwQwOmDgBMYSGLgBxhDMXgKqug/gBsB55a5bANci8h3RbRYAHgGcrol9A3ASEYIFAG2Y6ZAQLADQ6nu7AsECAGv+oqXeQzkhOwAKV9UFgLMWCHQJM4Ewig4TALsEwQzArkAwBbALEMwBVBC4KLrvyIRLEWF2uA4XAIkQeNjUG4IbgKgQXAFEhOAOoILAbwXWe9OKkYfNROTOOhCKAKggHAN47YCwEJGpJYRiAKJAKAogAoTiAFYgPAE4aLG7STmEAFBBYCeJmXDk+SUZBkApCKEAlIAQDoA3hJAAViCwu9TWWHkWkfUG7EbLhrAAliq6uksispWGrU7eCHWPg1WVq8UXAHxD1I0vETnscem/U8ICSBBPEewhsEx6j5AAEsU/iMhy9+n/APAUT2qhHJAoPmvXKAyAEuLDOEBVJwC4qdqU9nzWrDO/DI3iDlDVro6xmfjiDigtviiACOKLAUgQ/1M1Rc03StwzIFH8xGvn2BVANPGuJaCqVwDmLWtW2t5t5l1fg6rKjdG2dXsR8S4OiCzeHEB08aYAEsS/839CEfns/S2b4USTt0CieAZe8b9HswNQVSY9E79pcOZDiDcpAVX9ANDUpwsl3goAa7pujy+ceCsAdSUQUrwJAF60yoFZFQL8oJlHCLy6UMoeghneTK6XGAG44g54s9EBASfF9ZFGB7jiDnizwTvgF3UcC1CIOVnkAAAAAElFTkSuQmCC"/></div>
                 <ul class="banner-points">
                     <li v-for="item,index in bannerData" :class="{choosed:choosedBannerIdx==index}" @click="pointClick(index)"></li>
                 </ul>
@@ -30,18 +30,7 @@
             }
         },
         created(){
-            var _this=this;
-            // this.timeOutId=setTimeout(timeOutFun,2000);
-            (function timeOutFun(){
-                _this.timeOutFun=timeOutFun;
-                _this.choosedBannerIdx++;
-                if(_this.choosedBannerIdx<_this.bannerData.length){
-                    _this.timeOutId=setTimeout(timeOutFun,2000);
-                }else{
-                    _this.choosedBannerIdx=0
-                    _this.timeOutId=setTimeout(timeOutFun,2000);                    
-                }
-            })();
+            this.bannerChange();
         },
         mounted(){
             this.$http.get("/api/banner").then(response=>{
@@ -59,10 +48,31 @@
             }
         },
         methods:{
+            bannerChange:function(){
+                console.log(this.timeOutId)
+                if(this.choosedBannerIdx<this.bannerData.length-1){
+                    this.choosedBannerIdx++;
+                    this.timeOutId=setTimeout(this.bannerChange,2000);
+                }else{
+                    this.choosedBannerIdx=0
+                    this.timeOutId=setTimeout(this.bannerChange,2000);                    
+                }
+            },
             pointClick:function (index) {
-                this.choosedBannerIdx=index;
                 clearTimeout(this.timeOutId);
-                setTimeout(this.timeOutFun,2000);
+                this.timeOutId=setTimeout(this.bannerChange,2000);
+                this.choosedBannerIdx=index;
+            },
+            bannerMoveClick:function(index){
+                clearTimeout(this.timeOutId);
+                this.timeOutId=setTimeout(this.bannerChange,2000);
+                if(this.choosedBannerIdx==this.bannerData.length-1&&index==1){
+                    this.choosedBannerIdx=0;
+                }else if(this.choosedBannerIdx==0&&index==-1){
+                    this.choosedBannerIdx=this.bannerData.length-1;
+                }else{
+                    this.choosedBannerIdx+=index;
+                }
             }
         }
     }
@@ -121,14 +131,14 @@
     }
     .banner ul li{
         float:left;
-        height:6px;
-        width:6px;
+        height:10px;
+        width:10px;
         background-color:gray;
-        border-radius:3px;
+        border-radius:5px;
         margin:0 8px;
     }
     .banner ul li:hover,.banner ul li.choosed{
-        background-color:red;
+        background-color:#dd2222;
     }   
     .discover-main{
         width:980px;
