@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import VueResource from 'vue-resource'
 import'./assets/css/main.css'
+import'./assets/css/common.css'
 Vue.use(VueResource)
 
 Vue.config.productionTip = false

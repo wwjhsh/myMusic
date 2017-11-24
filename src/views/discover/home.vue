@@ -13,7 +13,37 @@
             </div>
         </div>
         <div class="discover-main">
-            <div class="discover-left">123</div>
+            <div class="discover-left">
+                <div class="container">
+                    <div class="disc-box">
+                        <div class="disc-title">
+                            <div class="disc-title-left">
+                                <i class="icon-title"></i>
+                                <span class="title">热门推荐</span>
+                                <span class="bread">
+                                    <a>华语</a>| 
+                                    <a>流行</a>|
+                                    <a>摇滚</a>|
+                                    <a>民谣</a>|
+                                    <a>电子</a>
+                                </span>
+                            </div>
+                            <div class="disc-title-right"><a>更多</a><i class="icon-more"></i></div>
+                        </div>
+                        <div class="disc-content">
+                            <ul class="suggest suggest2">
+                                <li v-for="item,index in suggestPlayListData" :class="{ml5:true,ml40:index%4!=0}">
+                                    {{item.id}}
+                                    <div class="card">
+                                        <img class="bg-img" :src="item.picUrl"/>
+                                    </div>
+                                    <div class="title"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="discover-right">123</div>
         </div>
     </div>
@@ -23,6 +53,7 @@
         data(){
             return{
                 bannerData:[],
+                suggestPlayListData:[],
                 choosedBannerIdx:2,
                 timeOutId:"",
                 timeOutFun:"",
@@ -35,7 +66,11 @@
         mounted(){
             this.$http.get("/api/banner").then(response=>{
                 this.bannerData=response.body.banners;
-                console.log(this.bannerData)
+                // console.log(this.bannerData)
+            })
+            this.$http.get("/api/personalized").then(response=>{
+                this.suggestPlayListData=response.body.result;
+                console.log(this.suggestPlayListData)
             })
         },
         computed:{
@@ -49,7 +84,7 @@
         },
         methods:{
             bannerChange:function(){
-                console.log(this.timeOutId)
+                // console.log(this.timeOutId)
                 if(this.choosedBannerIdx<this.bannerData.length-1){
                     this.choosedBannerIdx++;
                     this.timeOutId=setTimeout(this.bannerChange,2000);
@@ -151,9 +186,11 @@
     .discover-left{
         float:left;
         width:100%;
-        /* height:1400px; */
         margin-right:-250px;
-
+    }
+    .discover-left .container{
+        width: 690px;
+        margin:20px;
     }
     .discover-right{
         float:right;

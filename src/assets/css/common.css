@@ -1,0 +1,53 @@
+.disc-box{
+
+}
+.disc-title{
+    height: 35px;
+    line-height: 35px;
+    border-bottom: 2px solid #c10d0c;
+}
+.disc-title-left{
+    float: left;
+}
+.disc-title-left .title{
+    font-size: 20px;
+    color: #000;
+}
+.disc-title-left .bread{
+    margin-left:10px;
+    color: #bbb;
+}
+.bread a{
+    margin: 0 10px;
+}
+.icon-title{
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border: 4px solid #c10d0c;
+    border-radius: 10px;
+}
+.disc-title-right{
+    float: right
+}
+.icon-more{
+    content: ">"
+}
+.disc-content{
+
+}
+.suggest{
+    clear: both;
+}
+.suggest li{
+    float: left;
+    width:140px;
+    height: 204px;
+}
+.suggest .card{
+    position: relative
+}
+.suggest .bg-img{
+    width: 140px;
+    height: 140px;
+}
